@@ -1,0 +1,145 @@
+:root{
+    --white     : #ECF3FF;
+    --grey      : #EFEFEF;
+    --lightblue : #A6DDFF;
+    --blue      : #00B5D7;
+    --black     : #292929;
+    --raleway   : 'Raleway', sans-serif;
+}
+
+.body{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--black);
+    color: var(--grey);
+}
+
+.main{
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    *background-color: brown;
+}
+
+.form{
+    width: 100%;
+    height: 30em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--raleway);
+    *background-color: aqua;
+}
+
+.form__title{
+    width: 100%;
+    text-align: start;
+    margin-bottom: .1em;
+    font-weight: 900;
+    padding: .2em 0;
+    color: var(--grey);
+}
+
+.form__p{
+    width: 100%;
+    text-align: start;
+    margin-bottom: 3em;
+    font-weight: 400;
+    *background-color: #292929;
+}
+
+.form__input{
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 1em 1em 1em 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--grey);
+    outline: none;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.form__input--body{
+    height: 10em;
+    resize: none;
+    margin-bottom: 2em;
+}
+
+.btn{
+    width: 10em;
+    height: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid var(--grey);
+    transition: all 1s ease-in-out;
+    *background-color: brown;
+}
+
+.btn__box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    /* background-color: blueviolet; */
+}
+
+.btn__label{
+    font-weight: 600;
+    pointer-events: none;
+    /* background-color: brown; */
+}
+
+.btn__loader{
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+    /* background-color: blue; */
+}
+
+.btn__loader--active{
+    display: flex;
+}
+
+.btn__dot{
+    width: .4em;
+    height: .4em;
+    border-radius: 50%;
+    background-color: var(--grey);
+}
+
+.btn__dot--1, .btn__dot--2, .btn__dot--3{
+    animation-name: loader;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-direction: alternate;
+}
+
+.btn__dot--2{
+    animation-delay: -.2s;
+}
+
+.btn__dot--3{
+    animation-delay: -.4s;
+}
+
+@keyframes loader{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
